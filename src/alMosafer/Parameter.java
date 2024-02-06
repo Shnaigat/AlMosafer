@@ -14,6 +14,16 @@ public class Parameter {
 	String [] Websites = {"https://global.almosafer.com/en","https://global.almosafer.com/ar"};
 	
 	
+	Random randForCity = new Random();
+	
+	String [] CitiesInEng = {"dubai","jeddah","riyadh"} ;
+	int randEngCity = randForCity.nextInt(CitiesInEng.length);
+	
+	String [] CitiesInArb = {"جدة","دبي"};
+	int randArbCity = randForCity.nextInt(CitiesInArb.length);
+	
+	
+	
 	
 	
 	

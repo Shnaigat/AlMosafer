@@ -5,9 +5,9 @@
     <classes>
       <class name="alMosafer.TestCases">
         <methods>
-          <include name="CheckQitafLogoIsDisplayed"/>
           <include name="cc"/>
           <include name="SetUp"/>
+          <include name="ChickingDepatureDateAndReturnDate"/>
         </methods>
       </class> <!-- alMosafer.TestCases -->
     </classes>

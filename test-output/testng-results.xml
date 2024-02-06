@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-05T14:49:06 EET" name="Default suite" finished-at="2024-02-05T14:49:24 EET" duration-ms="17914">
+  <suite started-at="2024-02-06T17:44:28 EET" name="Default suite" finished-at="2024-02-06T17:44:47 EET" duration-ms="19618">
     <groups>
     </groups>
-    <test started-at="2024-02-05T14:49:06 EET" name="Default test" finished-at="2024-02-05T14:49:24 EET" duration-ms="17914">
+    <test started-at="2024-02-06T17:44:28 EET" name="Default test" finished-at="2024-02-06T17:44:47 EET" duration-ms="19618">
       <class name="alMosafer.TestCases">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:06 EET" name="SetUp" finished-at="2024-02-05T14:49:22 EET" duration-ms="15822" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:28 EET" name="SetUp" finished-at="2024-02-06T17:44:43 EET" duration-ms="15864" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="CheckDefulteLanguage()[pri:1, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:22 EET" name="CheckDefulteLanguage" finished-at="2024-02-05T14:49:22 EET" duration-ms="162" status="PASS">
+        <test-method signature="CheckDefulteLanguage()[pri:1, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="CheckDefulteLanguage" finished-at="2024-02-06T17:44:44 EET" duration-ms="215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckDefulteLanguage -->
-        <test-method signature="CheckDefulteCurrencyIsSAR()[pri:2, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:22 EET" name="CheckDefulteCurrencyIsSAR" finished-at="2024-02-05T14:49:22 EET" duration-ms="116" status="PASS">
+        <test-method signature="CheckDefulteCurrencyIsSAR()[pri:2, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="CheckDefulteCurrencyIsSAR" finished-at="2024-02-06T17:44:44 EET" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckDefulteCurrencyIsSAR -->
-        <test-method signature="CheckContactNumber()[pri:3, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:22 EET" name="CheckContactNumber" finished-at="2024-02-05T14:49:22 EET" duration-ms="78" status="PASS">
+        <test-method signature="CheckContactNumber()[pri:3, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="CheckContactNumber" finished-at="2024-02-06T17:44:44 EET" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckContactNumber -->
-        <test-method signature="CheckQitafLogoIsDisplayed()[pri:4, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:22 EET" name="CheckQitafLogoIsDisplayed" finished-at="2024-02-05T14:49:22 EET" duration-ms="129" status="PASS">
+        <test-method signature="CheckQitafLogoIsDisplayed()[pri:4, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="CheckQitafLogoIsDisplayed" finished-at="2024-02-06T17:44:44 EET" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckQitafLogoIsDisplayed -->
-        <test-method signature="CheckHotelsNotSelectedByDefault()[pri:5, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:22 EET" name="CheckHotelsNotSelectedByDefault" finished-at="2024-02-05T14:49:23 EET" duration-ms="155" status="PASS">
+        <test-method signature="CheckHotelsNotSelectedByDefault()[pri:5, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="CheckHotelsNotSelectedByDefault" finished-at="2024-02-06T17:44:44 EET" duration-ms="52" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckHotelsNotSelectedByDefault -->
-        <test-method signature="CheckRandomMethodToChangeLanguage()[pri:7, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:23 EET" name="CheckRandomMethodToChangeLanguage" finished-at="2024-02-05T14:49:24 EET" duration-ms="1335" status="PASS">
+        <test-method signature="ChickingDepatureDateAndReturnDate()[pri:6, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="ChickingDepatureDateAndReturnDate" finished-at="2024-02-06T17:44:44 EET" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChickingDepatureDateAndReturnDate -->
+        <test-method signature="CheckRandomMethodToChangeLanguage()[pri:7, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:44 EET" name="CheckRandomMethodToChangeLanguage" finished-at="2024-02-06T17:44:47 EET" duration-ms="2417" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckRandomMethodToChangeLanguage -->
-        <test-method is-config="true" signature="cc()[pri:0, instance:alMosafer.TestCases@6cbcf243]" started-at="2024-02-05T14:49:24 EET" name="cc" finished-at="2024-02-05T14:49:24 EET" duration-ms="0" status="PASS">
+        <test-method signature="clickOnHotelTab()[pri:8, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:47 EET" name="clickOnHotelTab" finished-at="2024-02-06T17:44:47 EET" duration-ms="677" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cc -->
+        </test-method> <!-- clickOnHotelTab -->
+        <test-method is-config="true" signature="postTesting()[pri:0, instance:alMosafer.TestCases@3234f74e]" started-at="2024-02-06T17:44:47 EET" name="postTesting" finished-at="2024-02-06T17:44:47 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTesting -->
       </class> <!-- alMosafer.TestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
