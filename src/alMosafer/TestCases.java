@@ -4,10 +4,13 @@ import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,7 +21,7 @@ public class TestCases extends Parameter {
 	public void SetUp() {
 		driver.manage().window().maximize();
 		driver.get(URL);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 
 		WebElement PopUpScreen = driver.findElement(By.className("sc-iBmynh"));
 
@@ -120,12 +123,72 @@ public class TestCases extends Parameter {
 		if (driver.getCurrentUrl().contains("ar")) {
 			WebElement HotelInput = driver.findElement(By.cssSelector("input[placeholder='البحث عن فنادق أو وجهات']"));
 			HotelInput.sendKeys(CitiesInArb[randArbCity]);
+			// HotelInput.sendKeys(CitiesInArb[randArbCity]+Keys.ARROW_DOWN+Keys.ENTER);
 
 		} else {
 			WebElement HotelInput = driver
 					.findElement(By.cssSelector("input[placeholder='Search for hotels or places']"));
 			HotelInput.sendKeys(CitiesInEng[randEngCity]);
+			// HotelInput.sendKeys(CitiesInEng[randEngCity]+Keys.ARROW_DOWN+Keys.ENTER);
+			// VariableName.sendKeys(Keys.chord(Keys.ENTER));
 		}
+		WebElement theList = driver.findElement(By.className("UzzIN"));
+		theList.findElements(By.tagName("li")).get(1).click();
+
+	}
+
+	@Test(priority = 9)
+	public void randomlySelectTheVistorNumber() {
+		WebElement visitors = driver.findElement(By.tagName("select"));
+		Select selector = new Select(visitors);
+
+		if (driver.getCurrentUrl().contains("ar")) {
+			selector.selectByVisibleText("1 غرفة، 1 بالغ، 0 أطفال");
+		} else {
+			selector.selectByVisibleText("1 Room, 1 Adult, 0 Children");
+		}
+		WebElement searchBtn = driver.findElement(By.className("js-HotelSearchBox__SearchButton"));
+		searchBtn.click();
+	}
+
+	@Test(priority = 10)
+	public void makeSurePageIsFullyLoaded() throws InterruptedException {
+		Thread.sleep(50000);
+		String LoadedResulte = driver.findElement(By.cssSelector(".sc-kAKrxA.klWOBA")).getText();
+
+		if (driver.getCurrentUrl().contains("ar")) {
+			boolean Actualresulte = LoadedResulte.contains("وجدنا");
+			assertEquals(Actualresulte, true);
+		} else {
+			boolean Actualresulte = LoadedResulte.contains("found");
+			assertEquals(Actualresulte, true);
+		}
+
+	}
+
+	@Test(priority = 11)
+	public void sortItemsBasedOnPrice() {
+		if (driver.getCurrentUrl().contains("en")) {
+			WebElement LowestPriceBtn = driver.findElement(By.cssSelector(".sc-csuNZv.hcjHpm"));
+			LowestPriceBtn.click();
+		} else {
+			WebElement LowestPriceBtn = driver.findElement(By.cssSelector(".sc-csuNZv.jyUtIz"));
+			LowestPriceBtn.click();
+		}
+		// int x=driver.findElement(By.cssSelector(".sc-htpNat.KtFsv.col-9")).findElements(By.className("Price__Value")).size();
+		// System.out.println(x);
+		WebElement HotelContainer = driver.findElement(By.cssSelector(".sc-htpNat.KtFsv.col-9"));
+		List<WebElement> prices = HotelContainer.findElements(By.className("Price__Value"));
+		System.out.println(prices.size());
+		System.out.println(prices.get(0).getText());
+		System.out.println(prices.get(prices.size()-1).getText());
+		String LowestPrice = prices.get(0).getText();
+		int LowestPriceInt = Integer.parseInt(LowestPrice);
+		String HighestPrice = prices.get(prices.size()-1).getText();
+		int HighestPriceInt = Integer.parseInt(HighestPrice);
+		assertEquals(LowestPriceInt<HighestPriceInt , true);
+		
+
 	}
 
 	@AfterTest

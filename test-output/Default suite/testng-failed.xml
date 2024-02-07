@@ -5,9 +5,9 @@
     <classes>
       <class name="alMosafer.TestCases">
         <methods>
-          <include name="cc"/>
           <include name="SetUp"/>
-          <include name="ChickingDepatureDateAndReturnDate"/>
+          <include name="makeSurePageIsFullyLoaded"/>
+          <include name="postTesting"/>
         </methods>
       </class> <!-- alMosafer.TestCases -->
     </classes>
